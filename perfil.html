@@ -3,31 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <title>Perfil</title>
+  <link rel="icon" href="/img/iconos/pag.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #3A3636;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .perfil-card {
+      background-color: #f5f5f5;
+      color: #333;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .perfil-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      margin: 10px 0 5px;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .botones a,
+    .botones button {
+      text-decoration: none;
+      background-color: #222;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .botones a:hover,
+    .botones button:hover {
+      background-color: #444;
+    }
+
+    .acciones {
+      margin-top: 20px;
+    }
+
+    .acciones a,
+    .acciones button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .acciones a:hover,
+    .acciones button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
-  <button><a href="pag_principal.html">Volver</a></button>
-  <button><a href="edit_user.html">Editar perfil</a></button>
-  <button><a href="pag_principal.html">Guardar</a></button>
+  <div class="perfil-card">
+    <div class="botones">
+      <a href="pag_principal.html">Volver</a>
+      <a href="edit_user.html">Editar perfil</a>
+      <a href="pag_principal.html">Guardar</a>
+    </div>
 
-  <form>
-    <img src="/img/perfil.jpg" alt="Imagen de usuario" width="100" height="100" style="border-radius: 50%;">
+    <img src="/img/perfil.jpg" alt="Imagen de usuario">
+
     <h4>Nombre</h4>
-    <p>tu nombre de user</p>
-    <p></p>
+    <p>Tu nombre de usuario</p>
+
     <h4>Gmail</h4>
-    <p>tu gmail</p>
-    <p></p>
-    <h4>Descripcion</h4>
-    <p>tu Descripcion</p>
+    <p>tu@gmail.com</p>
 
-    
+    <h4>Descripción</h4>
+    <p>Breve descripción de tu perfil...</p>
 
-    
-  </form>
-
-  <button><a href="presentar_perf.html">Presentacion de perfil</a></button><br><br>
-  <button>Compartir un Blog</button>
+    <div class="acciones">
+      <a href="presentar_perf.html">Presentación de perfil</a><br>
+      <button>Compartir un Blog</button>
+    </div>
+  </div>
 
 </body>
 </html>

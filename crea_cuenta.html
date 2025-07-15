@@ -2,89 +2,140 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Crea Cuenta</title>
-    <link  rel="icon" href="/img/iconos/pag.jpg" >
+    <title>Crear Cuenta</title>
+    <link rel="icon" href="/img/iconos/pag.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
             background: #3A3636;
-            margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
+            padding: 20px;
         }
+
         .contenedor {
-            background: #696767;
-            width: 600px;
-            padding: 30px;
-            border-radius: 10px;
-            box-sizing: border-box;
-            color: rgb(0, 0, 0);
+            background: #f5f5f5;
+            color: #333;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
-        .contenedor h1 {
+
+        h1 {
             text-align: center;
             margin-bottom: 30px;
         }
-        .form-row {
+
+        form {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
             gap: 20px;
         }
+
         .form-group {
-            flex: 1;
+            flex: 1 1 300px;
         }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
         input {
             width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: none;
-        }
-        button {
-            width: 120px;
             padding: 10px;
-            border: none;
+            margin-bottom: 20px;
             border-radius: 8px;
-            background-color: #ffffff;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
+            border: 1px solid #ccc;
+            font-size: 1rem;
         }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
         .footer {
             text-align: center;
             margin-top: 20px;
         }
-        a {
-            color: #183bd6;
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
             text-decoration: underline;
+        }
+
+        button {
+            margin-top: 15px;
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="contenedor">
-        <h1>Crea Cuenta</h1>
-        <div class="form-row">
+        <h1>Crear Cuenta</h1>
+        <form action="inicio_sesion.html" method="GET">
             <div class="form-group">
-                <label>Ingresa un gmail:</label>
-                <input type="email" placeholder="Tu@gmail.com">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu@gmail.com" required>
 
-                <label>Nombre de usuario:</label>
-                <input type="text" placeholder="Nombre de usuario">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" required>
             </div>
+
             <div class="form-group">
-                <label>Crea una contraseña:</label>
-                <input type="password" placeholder="Crea una contraseña">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Crea una contraseña" required>
 
-                <label>Confirma contraseña:</label>
-                <input type="password" placeholder="Confirma tu contraseña">
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña" required>
             </div>
-        </div>
-        <div class="footer">
-            <p>¿Ya tienes cuenta? <strong><a href="inicio_sesion.html">Inicia sesión</a></strong></p>
-            <button>Crear cuenta</button>
-        </div>
+
+            <div class="footer" style="flex: 1 1 100%;">
+                <p>¿Ya tienes cuenta? <a href="inicio_sesion.html">Inicia sesión</a></p>
+                <button type="submit">Crear cuenta</button>
+            </div>
+        </form>
     </div>
+
 </body>
 </html>

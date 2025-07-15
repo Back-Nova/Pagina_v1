@@ -1,25 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Nueva Contraseña</title>
+  <meta charset="UTF-8">
+  <title>Nueva Contraseña</title>
+  <link rel="icon" href="/img/iconos/pag.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #3A3636;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .contenedor {
+      background: #f5f5f5;
+      color: #333;
+      width: 100%;
+      max-width: 500px;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .boton {
+      width: 100%;
+      padding: 12px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #444;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-bottom: 20px;
+      background-color: #e6e6e6;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .volver:hover {
+      background-color: #d1d1d1;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Nueva contraseña</h1>
+  <div class="contenedor">
+    <a href="inicio_sesion.html" class="volver">← Volver</a>
 
-<p>Ingresa tu código</p>
-<input type="text" placeholder="Codigo">
-<br><br>
+    <h1>Nueva Contraseña</h1>
 
-<p>Nueva contraseña</p>
-<input type="password">
-<br><br>
+    <form action="inicio_sesion.html" method="GET">
+      <label for="codigo">Código de verificación</label>
+      <input type="text" id="codigo" name="codigo" placeholder="Escribe tu código" required>
 
-<p>Confirmar contraseña</p>
-<input type="password">
-<br><br>
+      <label for="nueva">Nueva contraseña</label>
+      <input type="password" id="nueva" name="nueva" placeholder="Nueva contraseña" required>
 
-<button><a href="inicio_sesion.html">Enviar</a></button>
+      <label for="confirmar">Confirmar contraseña</label>
+      <input type="password" id="confirmar" name="confirmar" placeholder="Confirma tu contraseña" required>
+
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </div>
 
 </body>
 </html>
